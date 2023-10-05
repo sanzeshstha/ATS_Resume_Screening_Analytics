@@ -1,7 +1,7 @@
 # ATS_Resume_Screening_Analytics
 
 ### Project Title:
-<b>ATS Resume Screening Analytics</b>
+ATS Resume Screening Analytics
 
 ### Project Description:
 <p>This project aims to develop a basic analytics tool for an Applicant Tracking System (ATS)
@@ -16,11 +16,6 @@ beginner-friendly and is expected to be completed within one week.
 - Define criteria for ranking resumes, such as required skills and experience.
 
 **Resume Parsing**:
-<style>
-    ul {
-        list-style-type: square;
-    }
-</style>
 - Use Python to parse the resumes and extract relevant information, such as skills, experience, and education.
 - Store the parsed information in a structured format, such as a CSV file or a DataFrame.
 
