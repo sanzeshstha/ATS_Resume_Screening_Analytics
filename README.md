@@ -16,6 +16,9 @@ beginner-friendly and is expected to be completed within one week.
 - Define criteria for ranking resumes, such as required skills and experience.
 
 **Resume Parsing**:
+
+
+
 - Use Python to parse the resumes and extract relevant information, such as skills, experience, and education.
 - Store the parsed information in a structured format, such as a CSV file or a DataFrame.
 
