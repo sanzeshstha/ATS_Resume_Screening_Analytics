@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h3>ATS resume parser and analyzer</h3>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="resume">Upload Resume</label>
+            <div class = "custom-file">
+                {{ form.hidden_tag()}} <!-- create a hidden field, protects the form from CSRF attacks -->
+                {{ form.file() }}
+                {{ form.submit()}}
+            </div>
+        </div>
+    </form>
+</body>
+</html>
