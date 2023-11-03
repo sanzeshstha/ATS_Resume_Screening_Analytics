@@ -12,7 +12,7 @@ from werkzeug.utils import secure_filename
 #initialise the app and configurations
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "mulasaag"
-app.config['UPLOAD_FOLDER'] = "uploads\\files"
+app.config['UPLOAD_FOLDER'] = "uploads/files"
 
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc'}
 
