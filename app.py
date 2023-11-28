@@ -11,6 +11,7 @@ from wtforms.validators import InputRequired
 
 #initialise the app and configurations
 app = Flask(__name__)
+app.config['SECRET_KEY'] = "mulasaag"
 # app.config['UPLOAD_FOLDER'] = "uploads/files"
 
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc'}
@@ -31,7 +32,7 @@ class UploadFileForm(FlaskForm):
 
 #route to the home page
 @app.route('/', methods = ['GET','POST'])
-@app.route('/home', methods = ['GET','POST'])
+# @app.route('/home', methods = ['GET','POST'])
 
 def home():
     '''
