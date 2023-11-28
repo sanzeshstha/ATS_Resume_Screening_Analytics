@@ -3,7 +3,7 @@ Flask Web app to upload the resume and save it locally in the uploads folder.
 '''
 #importing the required libraries
 # import os
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request, url_for, redirect
 from flask_wtf import FlaskForm
 from wtforms import FileField,SubmitField
 from wtforms.validators import InputRequired
@@ -45,12 +45,17 @@ def home():
             filenames = ""
             for i in request.files.getlist("file"):
                 filenames += i.filename + " "
-            # file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),
-            #                        app.config['UPLOAD_FOLDER'],secure_filename(file.filename)))
-            return f"<h3>File {filenames} has been successfully uploaded</h3>"
+            return redirect(url_for('uploads'))  # Redirect to the "/uploads" page
         else:
             return "<h3>File extension not allowed</h3>"
     return render_template('index.html',form=form)
+
+@app.route('/uploads')
+def uploads():
+    '''
+    This function returns the message that the files have been successfully uploaded
+    '''
+    return "<h3>Files successfully uploaded! You are now on the uploads page.</h3>"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8000, debug=True)

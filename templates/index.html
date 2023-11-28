@@ -3,19 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ATS Resume Parser and Analyzer</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2ivXBJL98HCOl0iXz7Ib/S5l5PI5C7eg"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h3>ATS resume parser and analyzer</h3>
-    <form method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="resume">Upload Resume</label>
-            <div class = "custom-file">
-                {{ form.hidden_tag()}} <!-- create a hidden field, protects the form from CSRF attacks -->
-                {{ form.file() }}
-                {{ form.submit()}}
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">ATS Resume Parser and Analyzer</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="resume">Upload Resume</label>
+                        <div class="input-group">
+                            {{ form.hidden_tag() }}
+                            {{ form.file(class="form-control", id="resume") }}
+                            <div class="input-group-append">
+                                <br><button type="submit" class="btn btn-primary">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js CDN (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-Ps97g84JNvnImfx3RTtMTQQvLUEI+opVq90a/n3bNyJnAAwaVO35jOKhF5pF2w8K"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2ivXBJL98HCOl0iXz7Ib/S5l5PI5C7eg"
+            crossorigin="anonymous"></script>
 </body>
 </html>
