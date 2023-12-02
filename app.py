@@ -56,7 +56,7 @@ def uploads():
     '''
     This function returns the message that the files have been successfully uploaded
     '''
-    return "<h3>Files successfully uploaded! You are now on the uploads page.</h3>"
+    return "<h1>Files successfully uploaded! You are now on the uploads page.</h1>"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8000, debug=True)
